@@ -1,20 +1,10 @@
 package streams;
 
+import utility.SumClass;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
-
-
-class sumClass {
-    public static int sum(int a, int b) {
-        return a + b;
-    }
-
-    public static int subtract(int a, int b) {
-        return a - b;
-    }
-}
-
 
 public class CountEachCharacter {
 
@@ -35,7 +25,7 @@ public class CountEachCharacter {
                 .collect(Collectors.toMap(
                         c -> c,
                         c -> 1,
-                        sumClass::sum,
+                        SumClass::sum,
                         LinkedHashMap::new
                 ));
         System.out.println(countChars);
