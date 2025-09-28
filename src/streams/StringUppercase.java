@@ -12,10 +12,10 @@ public class StringUppercase {
         List<String> list = Arrays.stream(input).map(String::toUpperCase).toList();
 
 
-        String[] output = list.toArray(new String[list.size()]);
+        String[] output = list.toArray(new String[0]);
 
-        for(int i=0;i<output.length;i++){
-            System.out.print(output[i]);
+        for (String s : output) {
+            System.out.print(s);
         }
     }
 }
